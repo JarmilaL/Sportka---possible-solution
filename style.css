@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Paytone+One&subset=latin-ext');
+
+/* Tady je magie a jednorožci */
+html { box-sizing: border-box; }
+*, ::before, :after { box-sizing: inherit; }
+
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Paytone One', sans-serif;
+	color: white;
+	background-image: linear-gradient(-225deg, #B6CEE8 0%, #F578DC 100%);
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 60px;
+	color: white;
+	text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	text-align: center;
+}
+
+.cislo {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 100px;
+	margin-right: 20px;
+	font-size: 48px;
+	line-height: 100px;
+	text-align: center;
+	color: black;
+	background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+	border-radius: 50%;
+}
+
+.cislo:last-child {
+	margin-left: 23px;
+	color: red;
+}
+
+.cislo:last-child::after {
+	content: '';
+	position: absolute;
+	left: -23px;
+	height: 100%;
+	border-left: 3px solid red;
+}
+
+.cislo::before {
+	z-index: -1;
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background-color: black;
+	filter: blur(35px);
+	transform: scale(0.8, 0.25);
+	opacity: 0.4;
+}
